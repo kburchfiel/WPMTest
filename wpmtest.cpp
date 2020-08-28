@@ -5,16 +5,15 @@
 #include <iostream>
 #include <chrono>
 
-using namespace std; //Not best practice but OK in my opinion for a simple program like this
+using namespace std;    //Not best practice but OK in my opinion for a simple program like this
 using namespace chrono; //This line proved to be necessary as well in order to get the program to compile
 
 double wpmtest(string s, double d, double w)
 {
     cout << "Begin typing!\n";
+    auto starttime = system_clock::now();
     while (true)
     {
-
-        auto starttime = system_clock::now();
 
         string e;
         getline(cin, e);
@@ -56,7 +55,7 @@ int main()
     double WPM;
     cout << "The text \"" << stringtotype << "\" has " << chars << " characters (including spaces), which equates to " << words << " words for the purpose of calculating WPM.\n";
 
-    cout << " The timer will start when you type any letter/number followed by Enter.\n";
+    cout << "Type any single letter/number followed by Enter. The WPM test will then begin!\n";
 
     char c;
     cin >> c;
@@ -92,7 +91,7 @@ int main()
             {
                 cout << "Legendary! Your WPM was 200 or higher!\n";
             }
-            cout << "Would you like to try again? If yes, type any letter other than 'q'; if not, type 'q'.\n";
+            cout << "Would you like to try again? If yes, type any letter other than q; if not, type q.\n";
             char c2;
             cin >> c2;
             if (c2 != 'q')
