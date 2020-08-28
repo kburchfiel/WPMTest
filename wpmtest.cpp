@@ -37,6 +37,7 @@ double wpmtest(string s, double d, double w)
 int main()
 
 {
+    cout << "Welcome to WPMTest, a simple typing test by Kenneth Burchfiel (MIT License; first released in August 2020).\n";
     cout << "Please enter a line of text that you would like to type.\n";
     string stringtotype;
     while (true)
